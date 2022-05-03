@@ -2,6 +2,7 @@ package inno.tech
 
 import inno.tech.constant.Command
 import inno.tech.constant.Message
+import inno.tech.properties.TelegramProperties
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.context.annotation.Lazy
 import org.springframework.stereotype.Component

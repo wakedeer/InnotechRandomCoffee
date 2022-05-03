@@ -18,11 +18,11 @@ schedule:
   suggest: '0 0 7 * * SUN'
   match: '0 0 7 * * MON'
 
-#matching.fast:
-#  from:
-#    dayOfWeek: DayOfWeek.MONDAY
-#    hours: 7
-#  to:
-#    dayOfWeek: DayOfWeek.SATURDAY
-#    hours: 7
+matching.fast:
+  from:
+    dayOfWeek: DayOfWeek.MONDAY
+    hours: '06:00:00'
+  to:
+    dayOfWeek: DayOfWeek.SATURDAY
+    hours: '06:00:00'
 

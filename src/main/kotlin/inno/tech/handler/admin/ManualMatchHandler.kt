@@ -1,6 +1,6 @@
 package inno.tech.handler.admin
 
-import inno.tech.TelegramProperties
+import inno.tech.properties.TelegramProperties
 import inno.tech.handler.Handler
 import inno.tech.model.User
 import inno.tech.service.SubscriptionService

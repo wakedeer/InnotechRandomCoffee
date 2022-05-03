@@ -37,12 +37,8 @@ class ReadyHandler(
             throw RandomCoffeeBotException("user cannot be null")
         }
 
-        val now = LocalDateTime.now()
-        val dayOfWeek = now.dayOfWeek
-        val hour = now.hour
-        val fastMatchingTime = DayOfWeek.FRIDAY <= dayOfWeek && 7 <= hour || DayOfWeek.SUNDAY >= dayOfWeek && 7 >= hour
         val readyUser = userRepository.findAllByStatusAndActiveTrue(Status.READY).firstOrNull()
-        if (fastMatchingTime && readyUser != null) {
+        if (fastMatchingAvailable() && readyUser != null) {
             //fast matching
             subscriptionService.sendInvitation(readyUser, user)
         } else {
@@ -55,5 +51,12 @@ class ReadyHandler(
             pauseReply.chatId = user.chatId.toString()
             telegramBotApi.execute(pauseReply)
         }
+    }
+
+    private fun fastMatchingAvailable(): Boolean {
+        val now = LocalDateTime.now()
+        val dayOfWeek = now.dayOfWeek
+        val hour = now.hour
+        return DayOfWeek.FRIDAY <= dayOfWeek && 7 <= hour || DayOfWeek.SUNDAY >= dayOfWeek && 7 >= hour
     }
 }
