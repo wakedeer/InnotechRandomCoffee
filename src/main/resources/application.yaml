@@ -20,9 +20,9 @@ schedule:
 
 matching.fast:
   from:
-    dayOfWeek: DayOfWeek.MONDAY
-    hours: '06:00:00'
+    day: 'SUNDAY'
+    time: '07:00:00'
   to:
-    dayOfWeek: DayOfWeek.SATURDAY
-    hours: '06:00:00'
+    day: 'SATURDAY'
+    time: '07:00:00'
 

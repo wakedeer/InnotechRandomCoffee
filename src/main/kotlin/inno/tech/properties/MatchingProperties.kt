@@ -13,7 +13,7 @@ import java.time.format.DateTimeFormatter
 @ConstructorBinding
 class MatchingProperties(val from: DayTimeOfWeek, val to: DayTimeOfWeek)
 
-class DayTimeOfWeek(val day: DayOfWeek, val time: LocalTime)
+data class DayTimeOfWeek(val day: DayOfWeek, val time: LocalTime)
 
 @Component
 @ConfigurationPropertiesBinding

@@ -19,6 +19,11 @@
       "name": "telegram.adminId",
       "type": "java.lang.String",
       "description": "Admin id."
+    },
+    {
+      "name": "matching.fast.from.dayOfWeek",
+      "type": "DayTimeOfWeek",
+      "description": "Description for matching.fast.from.dayOfWeek."
     }
   ]
 }
